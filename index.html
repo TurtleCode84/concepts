@@ -3,7 +3,8 @@
   <title>Page name</title>
 </head>
 <body>
-  <form id="myForm" submit="sendForm()"> <!-- Replace 'https://example.com' with the URL to POST to -->
+  <iframe id="noRedirect" name="noRedirect" style="display:none"></iframe>
+  <form id="myForm" action="https://example.com" target="noRedirect"> <!-- Replace 'https://example.com' with the URL to POST to -->
     <label for="textinput1">Text input 1:</label> <!-- Customize the names 'textinput1' and 'textinput2' as preferred -->
     <input type="text" id="textinput1" name="textinput1"><br><br>
     <label for="textinput2">Text input 2:</label>
@@ -11,25 +12,3 @@
     <input type="submit" value="Submit">
   </form>
 </body>
-<script>
-  function sendForm() {
-  	var url = "https://api.wasteof.money/";
-		var xhr = new XMLHttpRequest();
-		xhr.open("GET", url);
-		xhr.onreadystatechange = function () {
-   		if (xhr.readyState === 4) {
-        	alert(xhr.status + " " + xhr.responseText);
-      		console.log(xhr.status);
-      		console.log(xhr.responseText);
-   		}};
-		xhr.send();
-    /*var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://example.com"); 
-    xhr.onload = function(event){ 
-      alert("Success, server responded with: " + event.target.response);       // raw response
-    }; 
-    // or onerror, onabort
-    var formData = new FormData(document.getElementById("myForm")); 
-    xhr.send(formData);*/
-  }
-</script>
