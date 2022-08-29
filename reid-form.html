@@ -11,5 +11,12 @@
     <input type="text" id="textinput2" name="textinput2"><br><br>
     <input type="submit" value="Submit">
   </form>
+  <p id="message"></p>
+  </p>
   <p>After submitting data, click <a href="https://ptsv2.com/t/2sdaf-1661706149">here</a> to see the results.</p>
+  <script>
+  	document.getElementById("myForm").addEventListener("submit", function(){
+    	document.getElementById("message").innerHTML = "Form submitted!";
+		})
+  </script>
 </body>
