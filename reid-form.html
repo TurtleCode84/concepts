@@ -9,13 +9,15 @@
     <input type="text" id="textinput1" name="textinput1"><br><br>
     <label for="textinput2">Text input 2:</label>
     <input type="text" id="textinput2" name="textinput2"><br><br>
-    <input type="submit" value="Submit">
+    <input id="submitButton" type="submit" value="Submit">
   </form>
   <p id="message"></p>
   <p>After submitting data, click <a href="https://ptsv2.com/t/2sdaf-1661706149">here</a> to see the results.</p>
   <script>
+    document.getElementById("submitButton").disabled = false;
     document.getElementById("myForm").addEventListener("submit", function(){
       document.getElementById("message").innerHTML = "Form submitted!";
+      document.getElementById("submitButton").disabled = true;
     })
   </script>
 </body>
