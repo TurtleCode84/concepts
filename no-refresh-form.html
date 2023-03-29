@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <head>
-  <title>reid-form Concept</title>
+  <title>no-refresh-form Concept</title>
 </head>
 <body>
   <iframe id="noRedirect" name="noRedirect" style="display:none"></iframe>
-  <form id="myForm" action="https://ptsv2.com/t/2sdaf-1661706149/post" method="POST" target="noRedirect"> <!-- Replace 'https://example.com' with the URL to POST to -->
+  <form id="myForm" action="https://no-refresh-form.requestcatcher.com/test" method="POST" target="noRedirect"> <!-- Replace 'https://example.com' with the URL to POST to -->
     <label for="textinput1">Text input 1:</label> <!-- Customize the names 'textinput1' and 'textinput2' as preferred -->
     <input type="text" id="textinput1" name="textinput1" required><br><br>
     <label for="textinput2">Text input 2:</label>
@@ -12,7 +12,7 @@
     <input id="submitButton" type="submit" value="Submit">
   </form>
   <p id="message"></p>
-  <p>After submitting data, click <a href="https://ptsv2.com/t/2sdaf-1661706149">here</a> to see the results.</p>
+  <p>After submitting data, click <a href="https://no-refresh-form.requestcatcher.com/test">here</a> to see the results.</p>
   <script>
     document.getElementById("submitButton").disabled = false;
     document.getElementById("myForm").addEventListener("submit", function(){
